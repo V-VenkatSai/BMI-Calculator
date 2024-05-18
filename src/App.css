@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+  background-color:#f8f8f8;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  font-family: montserrat;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 75px;
+  gap:25px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  background-color:#fff;
+  width:50%;
+  padding:25px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+}
+
+.input{
+  display: flex;
+  justify-content: space-around;
+  gap:15px;
+  align-items: center;
+  width:100%;
+}
+
+.weight-input, .height-input{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:12px;
+  width:50%;
+}
+
+.input-slider{
+  width:80%;
+  accent-color: darkblue;
+}
+
+.output{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap:8px;
+  width:100%;
 }
 
-.App-link {
-  color: #61dafb;
+.output-text{
+  font-size: 18px;
+  font-weight: 600;
+  color:#fff;
+  background-color: darkblue;
+  padding:5px 10px;
+  border-radius: 2px;
+  letter-spacing: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.categories ul{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:25px;
+  font-size:14px;
+  font-weight:450;
+}
+
+@media screen and (max-width: 1200px) {
+  .container{
+    width:60%;
   }
-  to {
-    transform: rotate(360deg);
+  .input{
+    flex-direction: column;
+    gap:15px;
+  }
+  .weight-input, .height-input{
+    width:90%;
+  }
+  .categories ul{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container{
+    width:95%;
   }
 }
